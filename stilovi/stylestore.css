@@ -1,0 +1,126 @@
+.body{
+    width: 100%;
+    float: left;
+}
+
+.page-title{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(226, 219, 219);
+    float:left;
+    
+   }
+
+.page-title h2{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin: 45px 0 0 45px;
+}
+
+.middle{
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.middle .edition{
+    width: 25%;
+    margin-left: 45px;
+    background-color:rgba(182, 182, 182, 0.527) ;
+    float: left;
+    clear: left;
+    padding-bottom: 50px;
+    
+}
+.edition .article{
+    float: left;
+    width: 65%;
+    text-align: center;
+    
+    
+}
+
+.edition hr{
+    width:98%;
+}
+
+.img img{
+    width: 100px;
+    height: 170px;
+    padding-top: 25px;
+    margin-left: 5px;
+    float: left; 
+    clear: left;
+}
+
+.edition h4,.search h4{
+    color: tomato;
+    margin-left: 25px;
+    text-align: center;
+
+}
+
+.edition button,.search button{
+    background-color: #832c2c;
+    color: white;
+    margin-left: 25px;
+    text-align: center;
+    width: 125px;
+}
+
+.middle .search{
+    width: 40%;
+    float: left;
+    margin-left: 50px;
+}
+
+.search img{
+    width: 200px;
+    height: 300px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    float: left;
+    clear: left;
+}
+
+.search .article{
+    float: left;
+    margin-left: 15px;
+    text-align: center;
+    width: 50%;
+    
+    
+}
+
+.search h1{
+    text-align: center;
+}
+.middle .toplist{
+    float: left;
+}
+.toplist{
+    width: 25%;
+    float: left;
+
+}
+
+.toplist img{
+    width: 100px;
+    height: 170px;
+}
+
+.img1 img{
+    float: left;
+    clear: left;
+    padding-top: 25px;
+}
+
+.toplist .article{
+    width: 50%;
+    background-color: gainsboro;
+    float: left;
+    margin-left: 25px;
+    margin-top: 25px;
+    text-align: center;
+}

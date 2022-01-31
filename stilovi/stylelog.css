@@ -1,0 +1,161 @@
+.body{
+    width: 100%;
+    float: left;
+}
+
+.page-title{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(226, 219, 219);
+    float:left;
+    
+   }
+
+.page-title h2{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin: 45px 0 0 45px;
+}
+
+.middle{
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+.middle .edition,.middle .nalog,.middle .toplist{
+    float: left;
+    margin-left: 10px;
+}
+.middle .edition,.middle .toplist{
+    width: 23%;
+}
+
+.middle .edition{
+   background-color: rgba(182, 182, 182, 0.527);
+   padding-bottom: 50px;
+}
+.middle .nalog{
+width: 50%;
+
+} 
+
+.edition .article{
+    float: left;
+    width: 65%;
+    text-align: center;
+    
+    
+}
+
+.edition hr{
+    width:98%;
+}
+
+.img img{
+    width: 30%;
+    height: 170px;
+    padding-top: 25px;
+    margin-left: 5px;
+    float: left; 
+    clear: left;
+}
+
+.edition h4,.edicije h4{
+    color: tomato;
+    margin-left: 25px;
+    text-align: center;
+
+}
+
+.edition button,.sortname button,.sortcena button{
+    background-color: #832c2c;
+    color: white;
+    margin-left: 25px;
+    text-align: center;
+    width: 125px;
+}
+
+
+.nalog .login,.nalog .register{
+    width: 98%;
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.nalog h1{
+    text-align: center;
+}
+
+.nalog div{
+    margin-top: 15px;
+}
+
+.nalog label{
+    color:rgb(70, 66, 66);
+}
+
+.nalog input[type="email"], .nalog input[type="password"]{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 1px gainsboro;
+    
+}
+
+.nalog input[type="submit"]{
+    width: 20%;
+    height: 30px;
+    background-image: none !important;
+    background-color:rgb(202, 133, 4);
+    color: white;
+}
+
+.nalog a{
+    color: rgb(155, 102, 4);
+}
+
+
+
+.toplist img{
+    width: 100px;
+    height: 170px;
+}
+
+.img1 img{
+    float: left;
+    clear: left;
+    padding-top: 25px;
+}
+
+.toplist .article{
+    width: 50%;
+    background-color: rgb(172, 170, 170);
+    float: left;
+    margin-left: 5px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.sortname select,.sortcena select{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    margin-left: 50px;
+    background-color: burlywood;
+    
+}
+
+.registracija{
+    width: 250px;
+    height: 60px;
+    background-color:rgb(202, 133, 4) ;
+    border: solid 1px gray;
+    text-align: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,54 @@
+.contact{
+    background-image: url("./books.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 750px;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    float: left;
+    
+}
+
+.contact .information,.contact .message{
+    text-align: center;
+    width: 45%;
+    margin-left: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: rgba(245, 198, 136, 0.61);
+    
+}
+
+.information{
+    border: solid 1px rgb(182, 177, 177);
+    font-size: 17px;
+}
+.message{
+    border: solid 1px rgb(238, 232, 232);
+    border-radius: 10%;
+    padding-bottom: 5px;
+}
+
+
+.message input[type="text"],.message input[type="email"],.message textarea{
+    width: 45%;
+    margin-left: 50px ;
+    text-align: center;
+    margin-top: 5px;
+    
+}
+
+.message label{
+    margin-left:50px ;
+    font-size: 18px;
+    text-align: center;
+}
+
+.message  input[type="submit"]{
+    width: 15%;
+    background-image: none !important;
+    background-color: #f0a00dfa;
+    font-size: large;
+    text-align: center; 
+}
+

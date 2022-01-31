@@ -1,0 +1,133 @@
+.body{
+    width: 100%;
+    float: left;
+}
+
+.page-title{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(226, 219, 219);
+    float:left;
+    
+   }
+
+.page-title h2{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+margin: 45px 0 0 45px;
+}
+
+.middle{
+    width: 100%;
+    float: left;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    
+}
+.middle .edition,.middle .edicije,.middle .toplist{
+    float: left;
+    margin-left: 10px;
+}
+.middle .edition,.middle .toplist{
+    width: 23%;
+}
+
+.middle .edition{
+   background-color: rgba(182, 182, 182, 0.527);
+   padding-bottom: 50px;
+}
+.middle .edicije{
+width: 50%;
+background-color: rgba(247, 181, 94, 0.678);
+
+} 
+
+.edition .article{
+    float: left;
+    width: 65%;
+    text-align: center;  
+}
+
+.edition hr{
+    width:98%;
+}
+
+.img img{
+    width: 30%;
+    height: 170px;
+    padding-top: 25px;
+    margin-left: 5px;
+    float: left; 
+    clear: left;
+}
+
+.edition h4,.edicije h4{
+    color: tomato;
+    margin-left: 25px;
+    text-align: center;
+
+}
+
+.edition button,.sortname button,.sortcena button{
+    background-color: #832c2c;
+    color: white;
+    margin-left: 25px;
+    text-align: center;
+    width: 125px;
+}
+
+
+.edicije .sortcena,.edicije .sortname{
+    width: 48%;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 50px;
+    
+}
+
+.sortname img,.sortcena img{
+    width: 90px;
+    height: 150px;
+    margin-left: 10px;
+    float: left;
+}
+
+.sortname .article,.sortcena .article{
+    float: left;
+    width:65% ;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.sortname h3,.sortcena h3{
+    text-align: center;
+}
+
+.toplist img{
+    width: 100px;
+    height: 170px;
+}
+
+.img1 img{
+    float: left;
+    clear: left;
+    padding-top: 25px;
+}
+
+.toplist .article{
+    width: 50%;
+    background-color: rgb(172, 170, 170);
+    float: left;
+    margin-left: 5px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.sortname select,.sortcena select{
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    margin-left: 50px;
+    background-color: burlywood;
+    
+}
