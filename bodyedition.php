@@ -12,6 +12,7 @@
         <div class="img"> 
             <?php 
                 $niz_knjiga=$conn->nizKnjiga();
+                
                 $i=0;
                 foreach($niz_knjiga as $knjiga){
                     if($i<4){
@@ -43,7 +44,7 @@
            <div class="img"> 
                <?php 
                $niz_knjiga = $conn->nizKnjiga();
-               
+               shuffle($niz_knjiga);
                $i=0; 
                foreach($niz_knjiga as $knjiga){
                    if($i<5){               

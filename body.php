@@ -65,10 +65,8 @@
                         || substr($knjiga[2],0,1)==substr($search,0,1) || 
                         substr($knjiga[1],0,1)==substr($search,0,1)){
 
-                        echo  "<img src='$knjiga[6]' />" . "<div class=\"article\">"."<h1>".$knjiga[1]."<h1>". 
-                             "<h3>".$knjiga[2]."</h3>"."<h5 style=\"text-decoration:line-through\">"."Cena: ".$knjiga[5]." RSD"."</h5>"."<h4>"."Akcija:".($knjiga[5]-$knjiga[5]*20/100)." RSD".
-                             "</h4>"."<button id=\" ' $knjiga[0] ' \">"."Dodaj u korpu"."</button>"."</div>";
-                             $j++; 
+                        echo edicija_knjiga($knjiga[6],$knjiga[1],$knjiga[2],$knjiga[5],$knjiga[0]) ;
+                    $j++; 
                         }
                     }
                     if($j==0){

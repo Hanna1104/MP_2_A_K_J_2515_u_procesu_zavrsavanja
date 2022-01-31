@@ -1,12 +1,13 @@
 <?php
 
-function top_lista($slika,$naziv,$autor,$cena,$id){
-    $product=
-    "<img src='$slika' />" . 
+function top_lista($slika,$naziv,$autor,$cena,$product_id){
+    $product="<form method=\"post\" action=\"./edicije.php\">".
+            "<img src='$slika' />" . 
             "<div class=\"article\">"."<h3>".'"'.$naziv.'"'."</h3>". 
             "<p>".$autor."</p>"."<h5 style=\"text-decoration:line-through\">"."Cena:" .$cena." RSD".
             "</h5>"."<h4>"."Akcija:".($cena-$cena*20/100)." RSD".
-            "</h4>"."<button type='button'onclick='dodajUKorpu(".$id.")'>"."Dodaj u korpu"."</button>"."</div>";
+            "</h4>"."<button type=\"submit\" name=\"add\">"."Dodaj u korpu"."</button>".
+            "<input type='hidden' name='product_id' value='$product_id' />"."</div>"."</form>";
             return $product;
     }
     
@@ -27,7 +28,8 @@ function knjiga($slika,$naziv,$autor){
 }
 
 function edicija_knjiga($slika,$naziv,$autor,$cena,$product_id){
-    $product= "<form method=\"post\" action=\"./edicije.php\">".   
+    $product= 
+            "<form method=\"post\" action=\"./edicije.php\">".   
             "<img src='$slika' />" ."<div class=\"article\">"."<h3>".'"'
             .$naziv.'"'."</h3>"."<p>".$autor.
             "</p>"."<h5 style=\"text-decoration:line-through\">"."Cena:" .$cena." RSD".
@@ -49,14 +51,15 @@ function top_lista1($slika,$naziv,$autor,$cena){
     return $product;
 }
 
-function showcart($slika,$naziv,$autor,$cena){
+function showcart($slika,$naziv,$autor,$cena,$productid){
     $product=
-            "<form method=\"get\" action=\"./cart1.php\">".
-            "<img src='$slika' />" . 
-            "<div class=\"article\">"."<h3>".'"'.$naziv.'"'."</h3>". 
-            "<p>".$autor."</p>"."<h5 style=\"text-decoration:line-through\">"."Cena:" .$cena." RSD".
+            "<form method=\"post\" action=\"./cart1.php\">".
+            "<img src='$slika' />" ."<div class=\"article\">"."<h3>".'"'
+            .$naziv.'"'."</h3>"."<p>".$autor.
+            "</p>"."<h5 style=\"text-decoration:line-through\">"."Cena:" .$cena." RSD".
             "</h5>"."<h4>"."Akcija:".($cena-$cena*20/100)." RSD".
-            "</h4>"."</div>"."</form>";
+            "</h4>"."<button type=\"submit\" name=\"isprazni\">"."Isprazni"."</button>"."</div>"
+            ."</form>";
     echo $product;
 }
 ?>

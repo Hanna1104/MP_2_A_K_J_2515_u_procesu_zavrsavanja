@@ -163,6 +163,7 @@ nav .top-bar-right{
     font-size: 1vw;
 }
 .input2{
+    background-image: url("./stilovi/magnifier.png");
     width: 10%;
     height: 40px;
     border: none;
