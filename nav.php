@@ -13,18 +13,24 @@
 </div>
 <div id="search_1">
 <div id="search">
-    
+
     <form method="get" action="./prodavnica.php">
-        
-        <input class="input1" type="text" name="Pretraga" placeholder="Unesite pojam za pretragu"/>
-        <span class="searh_icon"><input class="input2" type="submit" name="submit" value="" /></span>
-        
-        
-    </form>   
-        
+    <div class="input-group">
+            <input class="form-control border-end-0 border rounded-pill" type="text" placeholder="Pretraga" name="Pretraga"
+             id="example-search-input">
+            <span class="input-group-append">
+                <button class="btn btn-outline-secondary bg-white border-start-0 border rounded-pill ms-n3" type="submit" name="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </span>
+    </div>
+    </form>        
+
+      
+    
 </div>
 
-
+     
 </div>
 </nav>
 </div>

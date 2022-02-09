@@ -1,5 +1,5 @@
-<?php include_once("./function/initdb.php");
-      include_once("./fun1.php");
+<?php include_once("./initdb.php");
+      include_once("./function/function.php");
  ?>
  <?php
  session_start();

@@ -5,13 +5,13 @@
 </div>
 
 <div class="second">
-    <div class="prvi"><h3><span class="lang_icon"></span> Jezik</h3></div>
-    <div class="drugi"><h3><span class="phone_icon"></span>&nbsp;+381659348090</h3></div>
+    <div class="prvi"><h3><span class="fas fa-globe"></span> Jezik</h3></div>
+    <div class="drugi"><h3><span class="fas fa-phone"></span>&nbsp+38160000000</h3></div>
     <div class="prazan"></div>
     <div class="treci">
-    <h3><span class="logo_icon"></span><a href="./mojnalog.php"> Moj nalog </a></h3>
+    <h3><span class="fas fa-person"></span><a href="./mojnalog.php"> Moj nalog </a></h3>
     </div>
-    <div class="cetvrti"><a href="./cart1.php"><h3><span class="cart_icon"></span> Moja korpa
+    <div class="cetvrti"><a href="./cart1.php"><h3><span class="fas fa-shopping-basket"></span> Moja korpa
     <?php
     if(isset($_SESSION['cart'])){
         $count = count($_SESSION['cart']);

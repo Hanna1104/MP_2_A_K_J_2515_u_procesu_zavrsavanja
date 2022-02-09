@@ -1,29 +1,38 @@
 <?php
-include_once("./function/initdb.php");
-include_once("./fun1.php");
+include_once("./initdb.php");
+include_once("./function/function.php");
+
 session_start();
-///ako korisnik vec postoji u sesiji
-if(isset($_SESSION['user'])) {
-    header('Location: ./index.php');
-}
+if(isset($_SESSION['user'])){
 
-//ako korisnik vec postoji u cookies
-if(isset($_COOKIE['user'])) {
-    $_SESSION['user'] = $_COOKIE['user'];
-    header('Location: ./index.php');
-}
+if(isset($_POST['add'])){
+    if(isset($_SESSION['cart'])){
+        $item_array_id = array_column($_SESSION['cart'],'product_id');
+       
+    if(in_array($_POST['product_id'],$item_array_id)){
+        echo"<script>alert('Product is already added in the cart')</script>";
+        echo "<script>window.location='edicije.php'</script>";
+    }else{
+        $count=count($_SESSION['cart']);
+        $item_array=array(
+            'product_id'=>$_POST['product_id']);
+        $_SESSION['cart'][$count]=$item_array;
+        
+    }   
 
-
-if (isset($_POST['email']) && isset($_POST['password'])) {
-    
-    if($conn->registrujKorisnika($_POST['email'],$_POST['password'])) {
-        header('Location: ./mojnalog.php');
     }
-    $greska = "Korisnik vec postoji";
+    else{
+        $item_array=array(
+            'product_id'=>$_POST['product_id']);
+        //create session variable cart
+        $_SESSION['cart'][0]=$item_array;
+        //print_r($_SESSION['cart']);
+    }
+    
 }
-
-
+}
 ?>
+
 
 
 <!DOCTYPE html>
@@ -33,7 +42,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./stilovi/styleheader_nav.css" />
+    <link rel="stylesheet" href="./stilovi/styleheader_nav1.css" />
     <link rel="stylesheet" href="./stilovi/stylelog.css" />
     <link rel="stylesheet" href="./stilovi/stylefooter.css" />
 </head>
@@ -82,7 +91,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
         <div class="login"> 
         
             
-            <form method="post" action="login1.php">
+            <form method="post" action="login.php">
                 <fieldset>
                     <legend> <h3> Prijavite se </h3> </legend>
          <div>  <label for="user"> Unesite e-mail adresu: </label>
@@ -96,14 +105,16 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                <div><a href="#"> Zaboravili ste lozinku ? </a></div>
                 </fieldset>
             </form>
-            
+            <?php if(isset($greska) && $greska){echo 
+       "<div>Pogrešan unos. Proveri lozinku ili korisničko ime.</div>";}?>
+    
         </div>
         
     
         <div class="register">
 
         <div>
-        <form method="POST" action="./mojnalog.php">
+        <form method="POST" action="./register.php">
                 <fieldset>
                 <legend> <h3> Registrujte se </h3> </legend>
                 <div> 
@@ -116,7 +127,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 </fieldset>
             </form>
             <?php if(isset($greska)) { echo $greska; }
-            if(isset($_POST['email'])) { echo $_POST['email']; }
+                  if(isset($_POST['email'])) { echo $_POST['email']; }
             ?>
             
         </div> 

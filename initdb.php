@@ -9,7 +9,7 @@ class Konekcija{
     
 
     $this->conn->query("CREATE DATABASE IF NOT EXISTS `MP_2_1`");
-    $this->conn->select_db('mp_2_1');
+    $this->conn->select_db('MP_2_1');
 
     $this->conn->query("CREATE TABLE IF NOT EXISTS `user` ( `id` INT NOT NULL AUTO_INCREMENT , 
     `username` VARCHAR(50) NOT NULL , `password` VARCHAR(50) NOT NULL , 
@@ -60,6 +60,7 @@ class Konekcija{
         if($res->num_rows == 1) {
             return false;
         } 
+        
         $enc_pass = password_hash($pass,PASSWORD_BCRYPT);
         $statement = $this->conn->prepare("INSERT INTO `user`(`username`,`password`) VALUES (?,?)");
         $statement->bind_param("ss",$user,$enc_pass);

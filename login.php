@@ -1,10 +1,9 @@
 <?php
-include_once('./function/initdb.php');
+include_once("./initdb.php");
 session_start();
-if(isset($_SESSION['user'])) {
+if(isset($_SESSION['user'])){
     header('Location: ./index.php');
 }
-
 //ako korisnik vec postoji u cookies
 if(isset($_COOKIE['user'])) {
     $_SESSION['user'] = $_COOKIE['user'];
@@ -20,7 +19,7 @@ if(isset($_POST['user']) && isset($_POST['pass'])) {
         $_SESSION['user'] = $_POST['user'];
         header('Location: ./index.php');
     }
-    
+    $greska=true;
 }
-header('Location: ./mojnalog.php');
+header('Location: ./index.php');
 ?>

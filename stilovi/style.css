@@ -20,18 +20,21 @@
 
 .inside-part h1{
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 3.3vw;
+    font-size: 5vw;
     color: rgb(97, 90, 90);
+    padding-top:3%;
     
 }
 
 .inside-part h2{
-    font-size: 2.4vw;
+    padding-top: 3%;
+    font-size: 2vw;
 }
-hr{
+.main-part .inside-part .hline{
     background-color: #832c2c;
     width: 45%;
     height: 2px;
+    margin: 0 auto;
 }
 
 .naslovi{
@@ -52,7 +55,6 @@ hr{
 
 .naslovi .knjige{
     width: 17%;
-    height: 550px;
     margin-top: 50px;
     margin-right: 30px;
     text-align: center;
@@ -61,9 +63,18 @@ hr{
     float: left;
     
 }
-img{
+.knjige h1{
+    font-size: 2vw;
+    padding-top:3%;
+}
+.knjige h4{
+    font-size: 1.5vw;
+    padding-top:3%;
+}
+
+.slika img{
     width: 100%;
-    height: 350px;
+    height: 30vw;
     }
 
 
