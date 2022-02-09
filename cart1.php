@@ -1,13 +1,13 @@
 <?php
 session_start();
-include_once("./function/initdb.php");
+include_once("./initdb.php");
 include_once("./header.php");
 include_once("./nav.php");
-include_once("./fun1.php");
+include_once("./function/function.php");
 include_once("./cart1.php");
 if(isset($_POST['isprazni'])){
-    
     $_SESSION['cart']=[];
+    
         
 }
 ?>
